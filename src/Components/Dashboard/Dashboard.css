@@ -1,0 +1,13 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+  }
+  
+  .dash-content {
+    display: flex;
+    flex: 1; 
+    border-left: 1px solid #ccc;
+   
+  
+  }
