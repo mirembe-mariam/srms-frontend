@@ -4,11 +4,39 @@
 .content {
   margin-left: 30px;
   margin-top: 30px;
+  width: 80%;
 }
 .header {
   font-size: 1.3rem;
-  border-bottom: 1px solid black;
   font-weight: 300;
-  padding-bottom: 15px;
 }
-  
+.header-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+.add-button {
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.class-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 20px !important;
+}
+
+.class-table th,
+.class-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.class-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
