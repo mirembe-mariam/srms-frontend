@@ -1,0 +1,14 @@
+.side {
+  display: flex;
+}
+.content {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.header {
+  font-size: 1.3rem;
+  border-bottom: 1px solid black;
+  font-weight: 300;
+  padding-bottom: 15px;
+}
+  
