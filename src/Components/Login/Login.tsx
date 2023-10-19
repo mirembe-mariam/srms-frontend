@@ -40,7 +40,7 @@ const Login = () => {
         <br />
         <button onClick={handleLogin}>Login</button>
       </div>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
     </div>
   );
 };
