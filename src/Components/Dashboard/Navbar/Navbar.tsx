@@ -4,7 +4,7 @@ import { FaUser } from "react-icons/fa";
 
 const NavBar = () => {
   const loggedInUser = {
-    name: "rhodin",
+    name: "mariam",
   };
 
   return (

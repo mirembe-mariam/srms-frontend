@@ -1,5 +1,4 @@
 .side-bar {
-  /* flex: 0.2; */
   background-color: #f0f0f0;
   flex-direction: column;
   padding-bottom: 20px;
@@ -15,7 +14,8 @@
 
 .side-bar :hover{
   color: blue;
-  transition: ease-in-out;
+  transition: all ease 0.5s;
+
 }
 
 .sidebar-item {

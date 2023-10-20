@@ -9,7 +9,6 @@ const Classes = () => {
       <NavBar />
       <div className="side">
         <Sidebar />
-     
         <Classcontent />
       </div>
     </div>

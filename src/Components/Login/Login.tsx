@@ -10,7 +10,7 @@ const Login = () => {
   const [error, setError] = useState("");
   
   const handleLogin = () => {
-    if (username === "rhodin" && password === "1234") {
+    if (username === "mariam" && password === "1234") {
       setIsLoggedIn(true);
       navigate("/dashboard");
     } else {
