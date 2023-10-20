@@ -10,7 +10,7 @@ const Login = () => {
   const [error, setError] = useState("");
   
   const handleLogin = () => {
-    if (username === "rhodin" && password === "1234") {
+    if (username === "mariam" && password === "1234") {
       setIsLoggedIn(true);
       navigate("/dashboard");
     } else {
@@ -40,7 +40,7 @@ const Login = () => {
         <br />
         <button onClick={handleLogin}>Login</button>
       </div>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
     </div>
   );
 };
