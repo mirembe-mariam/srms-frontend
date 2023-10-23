@@ -1,12 +1,18 @@
 import React from 'react'
 import Sidebar from '../Dashboard/Sidebar/Sidebar'
 import NavBar from '../Dashboard/Navbar/Navbar'
+import Resultscontent from './Resultscontent'
+import '../Classes/classes.css'
 const Results = () => {
   return (
-    <div className='results'>
+    <div className='classes'>
       <NavBar/>
+      <div className='side'>
       <Sidebar/>
-      {/* <h1>hi</h1> */}
+      <Resultscontent/>
+      </div>
+     
+   
     </div>
   )
 }

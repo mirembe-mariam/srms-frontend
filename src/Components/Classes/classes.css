@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid gray;
 }
 .add-button {
   float: right;
@@ -60,7 +60,7 @@
 }
 
 .modal {
-  width: 300px;
+  width: 500px;
   height: 570px;
   background-color: white;
   border: 1px solid #ccc;
@@ -79,7 +79,7 @@
 }
 
 .modal input {
-  width: 80%;
+  width: 90%;
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -87,7 +87,7 @@
 }
 
 .modal select {
-  width: 85%;
+  width: 95%;
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;

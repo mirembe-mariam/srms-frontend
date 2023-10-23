@@ -30,3 +30,21 @@
   border-radius: 50%;
   margin-right: 10px;
 }
+.user-info{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.menu-icon{
+  margin-right: 10px;
+  color:#854F6C
+}
+.nav-link{
+  text-decoration: none;
+}
+.dropdown-menu{
+  cursor: pointer;
+}
+.menu-text{
+  color: white;
+}
