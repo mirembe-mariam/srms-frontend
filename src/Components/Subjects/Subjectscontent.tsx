@@ -1,25 +1,26 @@
- import React from 'react'
+import React from 'react'
 import './subjects.css'
 import '../Classes/classes.css'
+import { FaEdit, FaTrash } from "react-icons/fa"; 
 
- const Subjectscontent = () => {
+const Subjectscontent = () => {
    return (
      <div className='sub-content'>
       <div className='header-items'>
-      <h3 className='header-sub'>Subject Management</h3>
+      <h3 className='header-sub'>Courseunit Management</h3>
       <hr/>
       <input type="text" placeholder="Search" className="search-input" />
       </div>
       <div className="actions">
         <button className="add-button" >
-          + Add Subject
+          + Add Courseunit
         </button>
       </div>
       <table className="class-table">
         <thead>
           <tr>
             <th>Id</th>
-            <th>Subject Name</th>
+            <th>Courseunit Name</th>
             <th>Status</th>
             <th>Date/Time</th>
             <th>Action</th>
@@ -29,34 +30,46 @@ import '../Classes/classes.css'
           <tr>
             <td>1</td>
             <td>Java</td>
-           
             <td>Active</td>
             <td>May</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
           </tr>
           <tr>
             <td>2</td>
             <td>Web 1</td>
-           
             <td>Active</td>
             <td>June</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
           </tr>
           <tr>
             <td>3</td>
             <td>Software testing</td>
-            
             <td>Active</td>
             <td>July</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
           </tr>
           <tr>
             <td>4</td>
             <td>IT Law </td>
-          
             <td>Active</td>
             <td>August</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
           </tr>
         </tbody>
       </table>

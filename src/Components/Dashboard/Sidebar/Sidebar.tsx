@@ -31,7 +31,7 @@ const Sidebar = () => {
       <Link to="/subjects" className="sidebar-link">
         <div className="sidebar-item">
           <FaBook className="sidebar-icon" />
-          <span className="sidebar-label">Subjects</span>
+          <span className="sidebar-label">Courseunits</span>
         </div>
       </Link>
 

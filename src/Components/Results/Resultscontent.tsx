@@ -1,6 +1,8 @@
 import React from "react";
 import "./results.css";
 import "../Classes/classes.css";
+import { FaEdit, FaTrash } from "react-icons/fa"; 
+
 const Resultscontent = () => {
   return (
     <div className='results-content'>
@@ -32,7 +34,11 @@ const Resultscontent = () => {
           <td>3</td>
           <td>Java</td>
           <td>56</td>
-          <td>Pass</td>
+          <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
         </tr>
         <tr>
           <td>2</td>
@@ -40,7 +46,11 @@ const Resultscontent = () => {
           <td>1</td>
           <td>Computer Literacy</td>
           <td>80</td>
-          <td>Pass</td>
+          <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
         </tr>
         <tr>
           <td>3</td>
@@ -48,7 +58,11 @@ const Resultscontent = () => {
           <td>2</td>
           <td>IT Law</td>
           <td>40</td>
-          <td>Fail</td>
+          <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
         </tr>
         <tr>
           <td>4</td>
@@ -56,7 +70,11 @@ const Resultscontent = () => {
           <td>1</td>
           <td>Software testing</td>
           <td>30</td>
-          <td>Pass</td>
+          <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
         </tr>
       </tbody>
     </table>

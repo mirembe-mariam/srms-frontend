@@ -61,7 +61,7 @@
 
 .modal {
   width: 500px;
-  height: 570px;
+  height: 500px;
   background-color: white;
   border: 1px solid #ccc;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
@@ -101,4 +101,14 @@
 .close {
   font-size: 24px;
   color: red;
+}
+
+.icon-gap {
+  margin-right: 20px; 
+}
+.delete-icon{
+  color: red;
+}
+.edit-icon{
+  color: blue;
 }

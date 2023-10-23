@@ -1,6 +1,7 @@
 import React from 'react'
 import './students.css'
 import '../Subjects/subjects.css'
+import { FaEdit, FaTrash } from "react-icons/fa"; 
 
 const Studcontent = () => {
   return (
@@ -19,7 +20,8 @@ const Studcontent = () => {
         <thead>
           <tr>
             <th>Id</th>
-            <th> Student Name</th>
+            <th>Student Id</th>
+            <th>Student Name</th>
             <th>Status</th>
             <th>Date/Time</th>
             <th>Action</th>
@@ -28,35 +30,51 @@ const Studcontent = () => {
         <tbody>
           <tr>
             <td>1</td>
-            <td>Mariam</td>
-      
+            <td>2000703436</td>
+            <td>Hanna</td>
             <td>Active</td>
             <td>May</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Mirembe</td>
-           
+            <td>2000705687</td>
+            <td>Amira</td>
             <td>Active</td>
             <td>June</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
           </tr>
           <tr>
             <td>3</td>
-            <td>Jamirah</td>
-            
+            <td>190003433</td>
+            <td>Mirembe</td>
             <td>Active</td>
             <td>July</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
           </tr>
           <tr>
             <td>4</td>
-            <td>Amira</td>
-          
+            <td>2000703432</td>
+            <td>Mariam</td>
             <td>Active</td>
             <td>August</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
           </tr>
         </tbody>
       </table>

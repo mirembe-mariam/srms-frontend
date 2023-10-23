@@ -1,5 +1,6 @@
 import React from 'react'
 import './scripts.css'
+import { FaEdit, FaTrash } from "react-icons/fa"; 
 
 const Scriptscontent = () => {
   return (
@@ -32,7 +33,11 @@ const Scriptscontent = () => {
             <td>Mariam</td>
             <td>1</td>
             <td>May</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
           </tr>
           <tr>
             <td>2</td>
@@ -40,7 +45,11 @@ const Scriptscontent = () => {
             <td>Mirembe</td>
             <td>2</td>
             <td>June</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
           </tr>
           <tr>
             <td>3</td>
@@ -48,7 +57,11 @@ const Scriptscontent = () => {
             <td>Jamirah</td>
             <td>3</td>
             <td>July</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
           </tr>
           <tr>
             <td>4</td>
@@ -56,7 +69,11 @@ const Scriptscontent = () => {
             <td>Amirah</td>
             <td>2</td>
             <td>August</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
           </tr>
         </tbody>
       </table>

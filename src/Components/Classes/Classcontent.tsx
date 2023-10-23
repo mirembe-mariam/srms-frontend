@@ -1,7 +1,10 @@
 import "./classes.css";
 import React, { useState } from "react";
+import { FaEdit, FaTrash } from "react-icons/fa"; 
+
 const Classcontent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const openModal = () => {
     console.log("Modal opened");
     setIsModalOpen(true);
@@ -25,9 +28,6 @@ const Classcontent = () => {
       {isModalOpen && (
         <div className="modal-overlay">
           <div className="modal">
-            <span className="close" onClick={closeModal}>
-              &times; 
-            </span>
             <form>
               <label>Id:</label>
               <input type="text" />
@@ -42,16 +42,12 @@ const Classcontent = () => {
               </select>
               <label>Date/Time:</label>
               <input type="date" />
-              <label>Action:</label>
-              <select>
-                <option>Pass</option>
-                <option>Fail</option>
-              </select>
+             
+              <div className="button-container">
+                <button>Save</button>
+                <button onClick={closeModal}>Cancel</button>
+              </div>
             </form>
-            <div className="button-container">
-            <button>Save</button>
-            <button>Cancel</button>
-            </div>
           </div>
         </div>
       )}
@@ -73,7 +69,11 @@ const Classcontent = () => {
             <td>COCIS</td>
             <td>Active</td>
             <td>March</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon"  title="edit"/>
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete"/>
+            </td>
           </tr>
           <tr>
             <td>2</td>
@@ -81,7 +81,11 @@ const Classcontent = () => {
             <td>COBAMS</td>
             <td>Active</td>
             <td>May</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon"  title="edit"/>
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"   title="delete"/>
+            </td>
           </tr>
           <tr>
             <td>3</td>
@@ -89,7 +93,11 @@ const Classcontent = () => {
             <td>LAW</td>
             <td>Active</td>
             <td>June</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon" title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
           </tr>
           <tr>
             <td>4</td>
@@ -97,7 +105,11 @@ const Classcontent = () => {
             <td>CEDAT</td>
             <td>Active</td>
             <td>July</td>
-            <td>Pass</td>
+            <td>
+              <FaEdit className="edit-icon"  title="edit" />
+              <span className="icon-gap" />
+              <FaTrash className="delete-icon"  title="delete" />
+            </td>
           </tr>
         </tbody>
       </table>
