@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "../Dashboard/Navbar/Navbar";
 import Sidebar from "../Dashboard/Sidebar/Sidebar";
 import Examinercontent from "./Examinercontent";
-import '../Classes/classes.css'
+import '../Lectures/classes.css'
 import './aiexaminer.css'
 const Aiexaminer = () => {
   return (

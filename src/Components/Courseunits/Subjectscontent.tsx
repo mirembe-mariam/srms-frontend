@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './subjects.css'
-import '../Classes/classes.css'
+import '../Lectures/classes.css'
 import { FaEdit, FaTrash } from "react-icons/fa"; 
 
 const Subjectscontent = () => {

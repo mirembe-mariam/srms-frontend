@@ -3,12 +3,12 @@ import "./App.css";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Login from "./Components/Login/Login";
 import Dashboard from "./Components/Dashboard/Dashboard";
-import Classes from "./Components/Classes/Classes";
+import Classes from "./Components/Lectures/Classes";
 import Aiexaminer from "./Components/Aiexaminer/Aiexaminer";
 import Results from "./Components/Results/Results";
 import Scripts from "./Components/Scripts/Scripts";
 import Students from "./Components/Students/Students";
-import Subjects from "./Components/Subjects/Subjects";
+import Subjects from "./Components/Courseunits/Subjects";
 
 function App() {
   return (

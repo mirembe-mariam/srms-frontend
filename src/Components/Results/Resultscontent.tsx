@@ -1,6 +1,6 @@
 import React from "react";
 import "./results.css";
-import "../Classes/classes.css";
+import "../Lectures/classes.css";
 import { FaEdit, FaTrash } from "react-icons/fa"; 
 
 const Resultscontent = () => {

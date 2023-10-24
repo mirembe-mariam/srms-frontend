@@ -1,6 +1,6 @@
 import React from 'react'
 import './students.css'
-import '../Subjects/subjects.css'
+import '../Courseunits/subjects.css'
 import { FaEdit, FaTrash } from "react-icons/fa"; 
 
 const Studcontent = () => {

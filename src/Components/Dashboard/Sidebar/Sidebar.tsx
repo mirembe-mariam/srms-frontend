@@ -52,7 +52,7 @@ const Sidebar = () => {
       <Link to="/ai-examiner" className="sidebar-link">
         <div className="sidebar-item">
           <FaRobot className="sidebar-icon" />
-          <span className="sidebar-label">AI examiners</span>
+          <span className="sidebar-label">AI examiner</span>
         </div>
       </Link>
 

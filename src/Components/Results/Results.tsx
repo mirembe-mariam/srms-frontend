@@ -2,7 +2,7 @@ import React from 'react'
 import Sidebar from '../Dashboard/Sidebar/Sidebar'
 import NavBar from '../Dashboard/Navbar/Navbar'
 import Resultscontent from './Resultscontent'
-import '../Classes/classes.css'
+import '../Lectures/classes.css'
 const Results = () => {
   return (
     <div className='classes'>
