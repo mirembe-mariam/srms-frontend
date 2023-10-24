@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useState } from "react";
 import './subjects.css'
 import '../Classes/classes.css'
 import { FaEdit, FaTrash } from "react-icons/fa"; 
 
 const Subjectscontent = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
    return (
      <div className='sub-content'>
       <div className='header-items'>
@@ -12,10 +22,32 @@ const Subjectscontent = () => {
       <input type="text" placeholder="Search" className="search-input" />
       </div>
       <div className="actions">
-        <button className="add-button" >
+        <button className="add-button" onClick={openModal} >
           + Add Courseunit
         </button>
       </div>
+      {isModalOpen && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <form>
+              <label>Courseunit Name:</label>
+              <input type="text" />
+             <label>Status:</label>
+              <select>
+                <option>Active</option>
+                <option>Inactive</option>
+              </select>
+              <label>Date/Time:</label>
+              <input type="date" />
+             
+              <div className="button-container">
+                <button>Save</button>
+                <button onClick={closeModal}>Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
       <table className="class-table">
         <thead>
           <tr>

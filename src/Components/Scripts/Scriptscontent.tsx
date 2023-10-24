@@ -19,8 +19,8 @@ const Scriptscontent = () => {
         <thead>
           <tr>
             <th>Id</th>
-            <th>Subject Name</th>
-            <th>Student</th>
+            <th>Courseunit Name</th>
+            <th>Student Name</th>
             <th>Semester</th>
             <th>Date/Time</th>
             <th>Action</th>

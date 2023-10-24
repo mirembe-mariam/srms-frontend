@@ -24,7 +24,7 @@ const Sidebar = () => {
       <Link to="/classes" className="sidebar-link">
         <div className="sidebar-item">
           <FaGraduationCap className="sidebar-icon" />
-          <span className="sidebar-label">Classes</span>
+          <span className="sidebar-label">Lectures</span>
         </div>
       </Link>
 

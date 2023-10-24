@@ -5,7 +5,7 @@ const Feed = () => {
   const cardsData = [
     { title: "Classes", content: "10" },
     { title: "Subjects", content: "20" },
-    { title: "Students", content: "100" },
+    { title: "Course units", content: "100" },
     { title: "Results", content: "10" },
     { title: "Scripts", content: "5" },
   ];

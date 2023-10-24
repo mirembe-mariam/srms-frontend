@@ -6,7 +6,6 @@ const Classcontent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log("Modal opened");
     setIsModalOpen(true);
   };
 
@@ -31,9 +30,9 @@ const Classcontent = () => {
             <form>
               <label>Id:</label>
               <input type="text" />
-              <label>Level:</label>
+              <label>Year:</label>
               <input type="text" />
-              <label>Section:</label>
+              <label>College:</label>
               <input type="text" />
               <label>Status:</label>
               <select>
@@ -55,8 +54,8 @@ const Classcontent = () => {
         <thead>
           <tr>
             <th>Id</th>
-            <th>Level</th>
-            <th>Section</th>
+            <th>Year</th>
+            <th>College</th>
             <th>Status</th>
             <th>Date/Time</th>
             <th>Action</th>
@@ -65,7 +64,7 @@ const Classcontent = () => {
         <tbody>
           <tr>
             <td>1</td>
-            <td>Level one</td>
+            <td>Year one</td>
             <td>COCIS</td>
             <td>Active</td>
             <td>March</td>
@@ -77,7 +76,7 @@ const Classcontent = () => {
           </tr>
           <tr>
             <td>2</td>
-            <td>Level two</td>
+            <td>Year two</td>
             <td>COBAMS</td>
             <td>Active</td>
             <td>May</td>
@@ -89,7 +88,7 @@ const Classcontent = () => {
           </tr>
           <tr>
             <td>3</td>
-            <td>Level three</td>
+            <td>Year three</td>
             <td>LAW</td>
             <td>Active</td>
             <td>June</td>
@@ -101,7 +100,7 @@ const Classcontent = () => {
           </tr>
           <tr>
             <td>4</td>
-            <td>Level four</td>
+            <td>Year four</td>
             <td>CEDAT</td>
             <td>Active</td>
             <td>July</td>
