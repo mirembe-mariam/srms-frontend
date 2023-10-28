@@ -4,14 +4,14 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  //const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   
   const handleLogin = () => {
     if (username === "mariam" && password === "1234") {
-      setIsLoggedIn(true);
+      //setIsLoggedIn(true);
       navigate("/dashboard");
     } else {
       setError("Invalid credentials ! Please try again.");

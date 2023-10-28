@@ -16,7 +16,7 @@ const Classcontent = () => {
   return (
     <div className="content">
       <div className="header-items">
-        <h3 className="header">Class Listing</h3>
+        <h3 className="header">Lecture Listing</h3>
         <input type="text" placeholder="Search" className="search-input" />
       </div>
       <div className="actions">
