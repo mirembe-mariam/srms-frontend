@@ -1,0 +1,102 @@
+.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #0a2e58;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .register-page h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .register-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    width: 300px;
+  }
+  
+  .register-card h3 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  
+  .register-button {
+    background-color: #0a2e58;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #083058;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+    .error-message {
+        color: red;
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }  
+
+    .password-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    
+    .password-input-wrapper input {
+      width: 100%;
+      padding-right: 40px; 
+    }
+    
+    .password-toggle-icon {
+      position: absolute;
+      right: 10px;
+      cursor: pointer;
+      color: #888;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    button:disabled {
+      background-color: #cccccc;
+      color: #666;
+      cursor: not-allowed;
+      opacity: 0.7;
+      pointer-events: none;
+      box-shadow: none;
+    }
+    
