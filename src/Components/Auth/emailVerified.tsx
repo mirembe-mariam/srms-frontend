@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useResendVerificationEmail } from "../../hooks/useLogin";
+import { useResendVerificationEmail } from "../../hooks/useRegister";
 import { message } from "antd";
 
 const EmailVerified = () => {
@@ -36,6 +36,7 @@ const EmailVerified = () => {
   }
 
   return (
+    <div className="tailwind">
     <div className="flex items-center justify-center min-h-screen bg-gray-300 px-4">
       <div className="bg-white p-8 rounded-lg shadow-xl text-center max-w-md w-full">
         {error ? (
@@ -63,7 +64,7 @@ const EmailVerified = () => {
               {isError && <p className="text-red-600 mt-2">{isError}</p>}
             </div>
             <p className="text-sm text-gray-500 mt-4">
-              Not redirected?{" "}
+              Not redirected?
               <span
                 className="text-blue-600 cursor-pointer hover:underline"
                 onClick={() => navigate("/login")}
@@ -75,27 +76,19 @@ const EmailVerified = () => {
         ) : (
           <>
             <h2 className="text-2xl font-semibold mb-2 text-gray-800">
-              Email Verified Successfully!
-            </h2>
-            <p className="text-gray-600 mb-6">{emailMessage}</p>
+            {emailMessage}     
+             </h2>
             <button
-              onClick={() => navigate("/dashboard")}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition duration-300 w-full"
+              onClick={() => navigate("/login")}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 mt-5 rounded transition duration-300 w-full"
             >
-              Go to Dashboard
+              Go to Login
             </button>
-            <p className="text-sm text-gray-500 mt-4">
-              Not redirected?{" "}
-              <span
-                className="text-blue-600 cursor-pointer hover:underline"
-                onClick={() => navigate("/login")}
-              >
-                Login manually
-              </span>
-            </p>
+           
           </>
         )}
       </div>
+    </div>
     </div>
   );
 };

@@ -16,10 +16,10 @@ export const useLogin = () => {
 
 
 
-const resendVerificationEmailFn = async (email: string) => {
-  const response = await api.post("/api/auth/resend-verification-email", { email });
+const verifyOtpFn = async ({ email, otp }: { email: string; otp: string }) => {
+  const response = await api.post("/api/auth/verify-otp", { otp, email });
   return response.data;
 }
-export const useResendVerificationEmail = () => {
-  return useMutation({ mutationFn: resendVerificationEmailFn });
+export const useVerifyOtp = () => {
+  return useMutation({ mutationFn: verifyOtpFn });
 }

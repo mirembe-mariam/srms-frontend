@@ -11,6 +11,7 @@ import Students from "./Components/Students/Students";
 import Subjects from "./Components/Courseunits/Subjects";
 import Register from "./Components/Auth/Register/Register";
 import EmailVerified from "./Components/Auth/emailVerified";
+import VerifyOtpPage from "./Components/Auth/verifyOtp";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register/>} />
           <Route path="/email-verified" element={<EmailVerified />} />
+          <Route path="/verify-otp" element={<VerifyOtpPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/*" element={<Navigate to="/login" />} />
           <Route path="/classes" element={<Classes/>} />

@@ -8,7 +8,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { mutate: login, isError } = useLogin();
+  const { mutate: login, isError , isPending} = useLogin();
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -81,7 +81,7 @@ const Login = () => {
           </div>
         </div>
 
-        <button className="login-button" onClick={handleLogin}>Login</button>
+        <button disabled={isPending} className="login-button button:disabled" onClick={handleLogin}>{isPending? "Please wait ..." : "Login"}</button>
 
         <p style={{ marginTop: "20px", fontSize: "0.9rem" }}>
           Don't have an account?{" "}

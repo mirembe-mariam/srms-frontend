@@ -28,14 +28,7 @@ const Register = () => {
       message.error("Please fill in all fields");
       return;
     }
-    if (password.length < 6) {
-      message.error("Password must be at least 6 characters long");
-      return;
-    }
-    if (password !== confirmPassword) {
-      message.error("Passwords do not match");
-      return;
-    }
+   
     if (!/\S+@\S+\.\S+/.test(email)) {
       message.error("Please enter a valid email address");
       return;
@@ -132,7 +125,7 @@ const Register = () => {
           </div>
         </div>
 
-        <button className="register-button" disabled={isPending} onClick={handleRegister}>
+        <button className="register-button button:disabled" disabled={isPending} onClick={handleRegister}>
           {isPending ? "Please wait..." : "Register"}
         </button>
 

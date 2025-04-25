@@ -19,3 +19,12 @@ export const useRegister = () => {
   return useMutation({ mutationFn: registerFn });
 };
 
+
+
+const resendVerificationEmailFn = async (email: string) => {
+  const response = await api.post("/api/auth/resend-verification-email", { email });
+  return response.data;
+}
+export const useResendVerificationEmail = () => {
+  return useMutation({ mutationFn: resendVerificationEmailFn });
+}
