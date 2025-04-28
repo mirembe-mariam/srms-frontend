@@ -1,22 +1,27 @@
 import React, { useState } from "react";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import "./navbar.css";
 import { FaUser, FaSignOutAlt, FaFileAlt } from "react-icons/fa";
 import { MdArrowDropDown } from "react-icons/md";
+import { useAuth } from "../../AuthContext/context";
 
 const NavBar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const loggedInUser = {
-    name: "mariam",
-  };
+  const {user, logout}=  useAuth();
+  const navigate = useNavigate();
+  console.log("user", user)
+  const username = user?.name || "Guest";
 
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  
   const handleDropdownToggle = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const handleLogout = () => {
-    window.location.href = "/login";
+ const handleLogout = () => {
+    logout(); 
+    navigate('/login');
   };
+
 
   return (
     <div className="navbar">
@@ -27,7 +32,7 @@ const NavBar = () => {
         <div className="user-dropdown">
           <div className="user-info" onClick={handleDropdownToggle}>
             <FaUser className="user-avatar" size={24} />
-            <span className="user-name">{loggedInUser.name}</span>
+            <span className="user-name">{username}</span>
             <MdArrowDropDown className="dropdown-icon" size={24} />
           </div>
           {isDropdownOpen && (

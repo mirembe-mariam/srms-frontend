@@ -14,8 +14,6 @@ export const useLogin = () => {
   return useMutation({ mutationFn: loginFn });
 };
 
-
-
 const verifyOtpFn = async ({ email, otp }: { email: string; otp: string }) => {
   const response = await api.post("/api/auth/verify-otp", { otp, email });
   return response.data;
@@ -23,3 +21,4 @@ const verifyOtpFn = async ({ email, otp }: { email: string; otp: string }) => {
 export const useVerifyOtp = () => {
   return useMutation({ mutationFn: verifyOtpFn });
 }
+

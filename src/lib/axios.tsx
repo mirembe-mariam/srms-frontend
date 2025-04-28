@@ -1,7 +1,7 @@
 import { message } from 'antd';
 import axios from 'axios';
 
-// const  baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
+// const  baseUrl = process.env.REACT_APP_PUBLIC_API_BASE_URL
 const baseUrl = "http://localhost:5000"
 
 const api = axios.create({
@@ -10,6 +10,7 @@ const api = axios.create({
       'Content-Type': 'application/json',
     },
   });
+  
   api.interceptors.request.use((config) => {
     const token = localStorage.getItem('token');
     const BEARER = 'Bearer'

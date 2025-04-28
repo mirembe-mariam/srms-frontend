@@ -3,8 +3,10 @@ import "./Register.css";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { message } from "antd";
-import { useRegister } from "../../../hooks/useRegister";
+import { useGoogleAuth, useRegister } from "../../../hooks/useRegister";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { GoogleLogin } from "@react-oauth/google";
+
 const Register = () => {
   const navigate = useNavigate();
   const { mutate: register, isError, error, isPending } = useRegister();
@@ -14,6 +16,8 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
+  const {mutate: googleAuthFn, isPending:googleLoading, isError:googleError} = useGoogleAuth();
+ 
 
   const toggleConfirmPasswordVisibility = () => {
     setConfirmPasswordVisible(!confirmPasswordVisible);
@@ -22,13 +26,16 @@ const Register = () => {
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
-
+  const handleGitHubLogin = () => {
+    window.location.href = "http://localhost:5000/auth/github";
+  };
+  
   const handleRegister = () => {
     if (!name || !password || !confirmPassword || !email) {
       message.error("Please fill in all fields");
       return;
     }
-   
+
     if (!/\S+@\S+\.\S+/.test(email)) {
       message.error("Please enter a valid email address");
       return;
@@ -62,7 +69,15 @@ const Register = () => {
       }
     );
   };
+const handleGoogleSuccess = (response: any) => {
+    const { tokenId } = response;
+    googleAuthFn({ idToken: tokenId });
+  };
 
+  const handleGoogleFailure = () => {
+    console.error("Google registration failed");
+    message.error("Google registration failed. Please try again.");
+  };
   return (
     <div className="register-page">
       <h2>Student Results Management System</h2>
@@ -125,11 +140,33 @@ const Register = () => {
           </div>
         </div>
 
-        <button className="register-button button:disabled" disabled={isPending} onClick={handleRegister}>
+        <button
+          className="register-button button:disabled"
+          disabled={isPending}
+          onClick={handleRegister}
+        >
           {isPending ? "Please wait..." : "Register"}
         </button>
 
-        <p style={{ marginTop: "15px" }}>
+        <span className="option">OR</span>
+
+        <div className="sign-in">
+          <div className="btn-google">
+          <GoogleLogin
+              onSuccess={handleGoogleSuccess}
+              onError={handleGoogleFailure}
+            />
+          </div>
+          <div className="btn-git">
+            <button className="sign-button" disabled={googleLoading}onClick={handleGitHubLogin}>
+              <img src="/github.webp" alt="GitHub Logo" className="logo" />
+              <p style={{marginLeft: '40px', fontSize: '0.9rem' }}>{googleLoading? "Please wait ..." : "Sign in with github"}</p>
+
+            </button>
+          </div>
+        </div>
+
+        <p style={{ marginTop: "20px" }}>
           Already have an account?{" "}
           <span
             onClick={() => navigate("/login")}
