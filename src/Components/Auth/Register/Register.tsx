@@ -16,7 +16,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
-  const {mutate: googleAuthFn, isPending:googleLoading, isError:googleError} = useGoogleAuth();
+  const {mutate: googleAuthFn, isPending:googleLoading} = useGoogleAuth();
  
 
   const toggleConfirmPasswordVisibility = () => {
@@ -56,7 +56,7 @@ const Register = () => {
       { email, name, password, confirmPassword },
       {
         onSuccess: () => {
-          message.success("Please check your email to verify your account");
+          message.success("Please check your email to verify your account.(Check spam folder incase you don't see it)");
           setEmail("");
           setName("");
           setPassword("");
@@ -159,7 +159,7 @@ const handleGoogleSuccess = (response: any) => {
           </div>
           <div className="btn-git">
             <button className="sign-button" disabled={googleLoading}onClick={handleGitHubLogin}>
-              <img src="/github.webp" alt="GitHub Logo" className="logo" />
+              <img src="/githubb.png" alt="GitHub Logo" className="logo" />
               <p style={{marginLeft: '40px', fontSize: '0.9rem' }}>{googleLoading? "Please wait ..." : "Sign in with github"}</p>
 
             </button>
